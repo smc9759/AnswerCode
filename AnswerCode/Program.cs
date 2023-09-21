@@ -10,18 +10,27 @@ namespace AnswerCode
     {
         static int Main(string[] args)
         {
-            string[] szInput = Console.ReadLine().Split();
-            int A = int.Parse(szInput[0]);
-            int B = int.Parse(szInput[1]);
-            int C = int.Parse(szInput[2]);
-            int result_A = (A + B) % C;
-            int result_B = ((A % C) + (B % C)) % C;
-            int result_C = (A*B)% C;
-            int result_D = ((A % C) * (B % C))% C;
-            Console.WriteLine(result_A);
-            Console.WriteLine(result_B);
-            Console.WriteLine(result_C);
-            Console.WriteLine(result_D);
+            string szInput1 = Console.ReadLine();
+            string szInput2 = Console.ReadLine();
+
+            int nInput1 = int.Parse(szInput1);
+
+            int nInput2Firstletter = szInput2[0] - '0';
+            int nInput2Secondletter = szInput2[1] - '0';
+            int nInput2Thirdletter = szInput2[2] - '0';
+
+            int line3, line4, line5 = 0;
+
+            line3 = nInput1 * nInput2Thirdletter;
+            line4 = nInput1 * nInput2Secondletter;
+            line5 = nInput1 * nInput2Firstletter;
+
+            int result = line3 + line4 * 10 + line5 * 100;
+
+            Console.WriteLine(line3);
+            Console.WriteLine(line4);
+            Console.WriteLine(line5);
+            Console.WriteLine(result);
 
             return 0;
         }
