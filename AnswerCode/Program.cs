@@ -10,9 +10,9 @@ namespace AnswerCode
     {
         static int Main(string[] args)
         {
-            string[] szInput = Console.ReadLine().Split();
+            string szInput = Console.ReadLine();
 
-            Console.WriteLine(double.Parse(szInput[0]) / double.Parse(szInput[1]));
+            Console.WriteLine(int.Parse(szInput) - 543);
 
             return 0;
         }
