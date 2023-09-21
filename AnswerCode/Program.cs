@@ -10,14 +10,9 @@ namespace AnswerCode
     {
         static int Main(string[] args)
         {
-            string szInput1 =  Console.ReadLine();
-            string szInput2 =  Console.ReadLine();
-            int nInput1 = int.Parse(szInput1);
+            string[] szInput = Console.ReadLine().Split();
 
-            int nInput2 = int.Parse(szInput2);
-            int nResult = nInput1 + nInput2;
-            Console.WriteLine("{0}", nResult);
-
+            Console.WriteLine(double.Parse(szInput[0]) / double.Parse(szInput[1]));
 
             return 0;
         }
